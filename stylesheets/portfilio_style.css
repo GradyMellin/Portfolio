@@ -1,0 +1,303 @@
+/*==========================================
+    Authour: Grady Mellin
+=============================================
+    GENERIC STYLES
+============================================*/
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-tap-highlight-color: rgb(252, 252, 252);
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* Body */
+body {
+    margin: 0%;
+}
+
+/* Element Styles*/
+h1 {
+	text-transform: uppercase; 
+	text-align: center;
+	margin-top: 3%; 
+	color: #ffffff;
+}
+
+h2{
+    color: rgb(236, 236, 236);
+	font-weight: 600;
+	text-align: center;
+    letter-spacing: .075rem;
+    line-height: 2rem;
+    font-size: 1.4rem;
+    padding: 2rem 1rem;
+    background-color: #a5a5a583;
+    border-radius: 2rem;
+}
+p {
+    color: rgb(236, 236, 236);
+	font-weight: 600;
+	text-align: justify;
+	letter-spacing: .075rem;
+    font-size: 1rem;
+    padding: 2rem 1rem;
+    background-color: #a5a5a583;
+    border-radius: 2rem;
+}
+
+.center {
+	text-align: center;
+}
+
+strong {
+    font-weight: bold;
+    letter-spacing: .075rem;
+	font-size: 1.25rem;
+	padding: 20px;
+}
+
+a {
+    color: rgb(233, 228, 255);
+    text-shadow: .1rem .1rem .3rem rgba(0, 88, 221, 0.89);
+}
+
+q {
+	font-style: italic;
+	font-weight: bold;
+}
+
+img {
+	filter: grayscale(50%); 
+    border-radius: 20px; 
+    max-width: 100%; 
+    height: 340px; 
+    margin-top: 30px;
+	margin-left: auto; 
+    margin-right: auto;
+	display: block;	
+}
+
+/* Element Hover Style */
+center:hover {
+	transition: transform 1.5s;
+	transform: scale(1.05);
+}
+
+p:hover {
+    color: #d6d6d6;	
+    transition: transform 1s;
+    transform: scale(1.01);
+    text-shadow: .1rem .1rem .3rem rgba(0, 88, 221, 0.74);
+}
+a:hover {
+    color: #c2a8ff;	
+    transition: transform 1s;
+    transform: scale(1.1);
+    text-shadow: .1rem .1rem .3rem rgba(248, 249, 250, 0.74);
+}
+
+h1:hover {
+    color: #a5a5a5;
+    transition: transform 1s;
+    transform: scale(1.05);
+    text-shadow: .1rem .1rem .3rem rgba(0, 88, 221, 0.74);
+}
+
+h2:hover {
+    color: #d6d6d6;
+    transition: transform 1s;
+    transform: scale(1.02);
+    text-shadow: .1rem .1rem .3rem rgba(0, 88, 221, 0.74);
+}
+
+img:hover {
+	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
+    transition: transform 1s;
+	transform: scale(1.05);
+}
+
+
+
+/* /Body */
+
+/* Navbar */
+.navbar {
+    overflow: hidden;
+    background-color:  rgba(14, 50, 187,.95);
+    border: .15rem solid rgb(2, 54, 131);
+    border-radius: .07rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    background-color: #ffffff;
+    color: rgba(45, 90, 214);
+    border: 2px solid rgb(2, 54, 131);
+    border-radius: 1.5rem;
+    padding: .35rem .9rem;
+    margin: .35rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: .1rem .1rem .3rem rgba(2, 54, 131, 0.5);
+}
+
+.navbar a.active {
+    background-color: #ffffff7e;
+    color: #ffffff;
+    text-shadow: .1rem .1rem .3rem rgba(2, 54, 131, 0.8);
+}
+
+.navbar a.active:hover {
+    background-color: #ffffff7e;
+    color: rgba(45, 90, 214);
+    text-shadow: .1rem .1rem .3rem rgba(255, 255, 255, 0.8);
+}
+.navbar a:hover {
+    background-color: #5e96df;
+    color: #ffffff;
+    text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 0.5);
+}
+/* /Navbar */
+
+/* Home */
+#background_video {
+    position: fixed;
+    right: 0; 
+	bottom: 0; 
+	min-width: 100%; 
+    z-index: -1;
+    filter: grayscale(50%);
+}
+
+.video_text { 
+	background: rgba(0, 0, 0, 0.5); 
+	color: white; 
+	width: 100%;
+	padding: 1.25em;
+    margin-top: 23%;
+    font-size: 1.2em;
+    text-shadow: .1em .1em .3em rgba(255, 255, 255, 0.5);
+}
+/* /Home */
+
+/* Table */
+
+*{
+    box-sizing: border-box;
+}
+.column_1 {
+	float: left;  
+	width: 50%; 
+	padding: 10px; 
+	padding-top: 1%; 
+    height: 450px; 
+    background-color: #3700fc9a; 
+}
+
+.column_2 {
+	float: left;  
+	width: 50%; 
+	padding: 10px; 
+    padding-top: 1.9%; 
+    padding-bottom: 1.9%; 
+    height: 450px; 
+    background-color: #646464dc; 
+}
+
+.column_3 {
+	float: left;  
+	width: 50%; 
+	padding: 10px; 
+	padding-top: 2%; 
+    height: 450px; 
+    background-color: #646464dc; 
+}
+.row:after { /* This inserts something after the content of selected elements */
+	content: ""; /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
+	display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
+	clear: both; /* This clears any other elements from floating on the left or the right of an element */
+}
+
+/* Contact Form */
+label {
+    font-weight: bold;
+    color: rgb(7, 25, 95);
+}
+
+input[type=text] { 
+	width: 100%;
+	padding: .6rem;
+    border: .1rem solid rgb(153, 153, 153); 
+    border-radius: .6rem; 
+    box-sizing: border-box;
+    margin-top: .2rem;
+    margin-bottom: 1rem;
+    resize: vertical; 
+    font-weight: Bold; 
+}
+
+input[type=submit] { /* This covers the submit button for the contact form */
+	background-color: rgb(11, 36, 134);
+	color: white;
+	font-weight: bold;
+	padding: .7rem 1.2rem;
+	border:  .1rem solid white;
+	border-radius: .25rem;
+	cursor: pointer;
+	display: block;
+	margin-left: auto;
+	margin-right: auto; 
+	font-weight: bold;
+}
+
+input[type=text]:hover {
+    transform: scale(1.02); 
+    transition: transform .5s;
+    border: .1rem solid rgb(11, 36, 134);
+}
+input[type=submit]:hover {
+	background-color: white; 
+	color: rgb(11, 36, 134); 
+    font-weight: bold; 
+    border: .1rem solid rgb(11, 36, 134); 
+	transform: scale(1.15); 
+	transition: transform 1s; 
+}
+
+form { 
+	border-radius: 2rem; 
+	background-color: #aaaaaa;
+	padding: 1.5rem;
+	font-family: "Trebuchet MS", Optima;
+}
+
+/* /Contact Form */
+
+/* Footer */
+footer {
+    font-weight: bold;
+    color:rgb(8, 29, 110) ;
+    text-align: right;
+    padding: 0.5% 5%;
+    background-color:rgba(163, 163, 163, 0.808);
+    border: .1rem solid rgb(7, 25, 95);
+    width: 100%;
+    z-index: 1;
+}
+
+footer a {
+    color: rgb(7, 25, 95);
+    text-shadow: .1rem .1rem .3rem rgba(0, 88, 221, 0.89);
+}
+footer a:hover {
+    color: rgb(8, 29, 110);	
+    transition: transform 1s;
+    transform: scale(1.1);
+    text-shadow: .1rem .1rem .3rem rgba(248, 249, 250, 0.74);
+}
