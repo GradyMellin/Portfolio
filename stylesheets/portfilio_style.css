@@ -10,12 +10,7 @@ html {
     -ms-text-size-adjust: 100%;
 }
 
-/* Body */
-body {
-    margin: 0%;
-}
-
-/* Element Styles*/
+/* Element Styles */
 h1 {
 	text-transform: uppercase; 
 	text-align: center;
@@ -43,6 +38,7 @@ p {
     padding: 2rem 1rem;
     background-color: #a5a5a583;
     border-radius: 2rem;
+    text-shadow: .1rem .1rem .3rem rgba(0, 88, 221, 0.5);
 }
 
 .center {
@@ -84,7 +80,7 @@ center:hover {
 }
 
 p:hover {
-    color: #d6d6d6;	
+    color: #ffffff;	
     transition: transform 1s;
     transform: scale(1.01);
     text-shadow: .1rem .1rem .3rem rgba(0, 88, 221, 0.74);
@@ -97,17 +93,17 @@ a:hover {
 }
 
 h1:hover {
-    color: #a5a5a5;
+    color: #ffffff;
     transition: transform 1s;
     transform: scale(1.05);
     text-shadow: .1rem .1rem .3rem rgba(0, 88, 221, 0.74);
 }
 
 h2:hover {
-    color: #d6d6d6;
+    color: #ffffff;
     transition: transform 1s;
     transform: scale(1.02);
-    text-shadow: .1rem .1rem .3rem rgba(0, 88, 221, 0.74);
+    text-shadow: .1rem .1rem .3rem rgba(0, 88, 221, 0.9);
 }
 
 img:hover {
@@ -116,52 +112,85 @@ img:hover {
 	transform: scale(1.05);
 }
 
+/* /Element Style */
 
+/* Body */
+body {
+    margin: 0%;
+}
 
 /* /Body */
 
 /* Navbar */
 .navbar {
     overflow: hidden;
-    background-color:  rgba(14, 50, 187,.95);
-    border: .15rem solid rgb(2, 54, 131);
+    background-color:  rgb(14, 49, 187);
+    border: .15rem solid rgb(1, 37, 92);
     border-radius: .07rem;
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
 }
 
 .navbar a {
     float: left;
     display: block;
-    background-color: #ffffff;
-    color: rgba(45, 90, 214);
-    border: 2px solid rgb(2, 54, 131);
+    background-color: rgb(14, 49, 187);
+    color: rgb(255, 255, 255);
+    border: .1rem solid rgb(255, 255, 255);
     border-radius: 1.5rem;
-    padding: .35rem .9rem;
-    margin: .35rem;
+    padding: .33rem 1rem .35rem .9rem;
+    margin: .4rem;
     text-decoration: none;
     font-size: 1.25rem;
     font-weight: bold;
     text-align: center;
-    text-shadow: .1rem .1rem .3rem rgba(2, 54, 131, 0.5);
+    text-shadow: none;
 }
 
 .navbar a.active {
-    background-color: #ffffff7e;
+    background-color: #00000057;
     color: #ffffff;
     text-shadow: .1rem .1rem .3rem rgba(2, 54, 131, 0.8);
 }
 
 .navbar a.active:hover {
-    background-color: #ffffff7e;
-    color: rgba(45, 90, 214);
-    text-shadow: .1rem .1rem .3rem rgba(255, 255, 255, 0.8);
+    background-color: #ffffffdc;
+    color: rgb(2, 54, 131);
+    text-shadow: .1rem .1rem 0rem #ffffff .3rem .3rem .2rem rgb(2, 90, 214);
+    border: .1rem solid rgb(2, 54, 131);
+    box-shadow: 0 0 .3rem .1rem rgba(255, 255, 255, 0.452);
 }
 .navbar a:hover {
-    background-color: #5e96df;
-    color: #ffffff;
-    text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 0.5);
+    background-color: #ffffffd8;
+    color: rgb(2, 54, 131);
+    text-shadow: .1rem .1rem 0rem #ffffff .2rem .2rem .2rem rgb(2, 90, 214);
+    border: .1rem solid rgb(2, 54, 131);
+    box-shadow: 0 0 .3rem .1rem rgba(255, 255, 255, 0.452);
+}
+
+.icon a{
+    float: right;
+    padding: 0;
+    margin-right: 1rem;
+}
+.icon img {  
+    max-width: 100%; 
+    float: right;
+    height: 2.5rem; 
+    padding: none;
+    box-shadow: none;
+    margin-top: 0rem;
+	margin-left: auto; 
+    margin-right: auto;
+}
+
+.icon a:hover{
+    text-shadow:none;
+    border: none;
+    box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.658);
+    background-color: rgba(255, 255, 255, 0);
 }
 /* /Navbar */
 
@@ -194,29 +223,29 @@ img:hover {
 .column_1 {
 	float: left;  
 	width: 50%; 
-	padding: 10px; 
+	padding: 0.75rem; 
 	padding-top: 1%; 
-    height: 450px; 
-    background-color: #3700fc9a; 
+    height: 29.25rem; 
+    background-color: #3700fce7; 
 }
 
 .column_2 {
 	float: left;  
 	width: 50%; 
-	padding: 10px; 
+	padding: 0.75rem; 
     padding-top: 1.9%; 
     padding-bottom: 1.9%; 
-    height: 450px; 
-    background-color: #646464dc; 
+    height: 29.25rem; 
+    background-color: #646464f1; 
 }
 
 .column_3 {
 	float: left;  
 	width: 50%; 
-	padding: 10px; 
+	padding: 0.75rem; 
 	padding-top: 2%; 
-    height: 450px; 
-    background-color: #646464dc; 
+    height: 29.25rem; 
+    background-color: #646464e8; 
 }
 .row:after { /* This inserts something after the content of selected elements */
 	content: ""; /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
@@ -273,7 +302,8 @@ input[type=submit]:hover {
 form { 
 	border-radius: 2rem; 
 	background-color: #aaaaaa;
-	padding: 1.5rem;
+    padding: 1.5rem;
+    margin: auto 1rem;
 	font-family: "Trebuchet MS", Optima;
 }
 
@@ -281,23 +311,25 @@ form {
 
 /* Footer */
 footer {
-    font-weight: bold;
-    color:rgb(8, 29, 110) ;
-    text-align: right;
+    color:rgb(253, 253, 255) ;
+    text-align: left;
     padding: 0.5% 5%;
-    background-color:rgba(163, 163, 163, 0.808);
-    border: .1rem solid rgb(7, 25, 95);
+    background-color:rgba(8, 29, 110);
+    border: .1rem solid rgb(255, 255, 255);
     width: 100%;
     z-index: 1;
 }
 
 footer a {
-    color: rgb(7, 25, 95);
+    float: right;
+    color: rgb(255, 255, 255);
     text-shadow: .1rem .1rem .3rem rgba(0, 88, 221, 0.89);
+    margin-left: 3rem;
 }
 footer a:hover {
-    color: rgb(8, 29, 110);	
+    color: rgb(255, 255, 255);	
     transition: transform 1s;
     transform: scale(1.1);
-    text-shadow: .1rem .1rem .3rem rgba(248, 249, 250, 0.74);
+    text-shadow: .1rem .1rem .3rem rgba(0, 88, 221, 0.89);
 }
+
