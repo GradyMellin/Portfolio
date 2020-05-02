@@ -6,18 +6,21 @@
 	 	<title>Grady Mellin</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="stylesheets/portfilio_style.css">
+        
+		<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     </head>
 <!--/Head-->
 
 <!--Body-->
 	<body class="background">
-
+    
+    
 <!--NavBar-->
         <div class="navbar">
-            <a class="active" href="#home">Home</a> 
+            <a class="home" href="#home/" target="_blank"><img src="stylesheets/img/home.png" alt="Home"></a>
             <a href="#about">About</a>
             <a href="#gitHub">GitHub</a>
-            <a href="#contact">Contact</a>
+            <a onclick="openForm()">Contact</a>
             <div class="icon">
                 <a href="https://www.linkedin.com/in/grady-mellin-b01059198/" target="_blank"><img src="stylesheets/img/linkedin.png" alt="linked-In"></a>
                 <a href="https://www.facebook.com/grady.mellin" target="_blank"><img src="stylesheets/img/facebook.png" alt="facebook"></a>
@@ -26,6 +29,7 @@
 <!--/NavBar-->
 
 <!--Home-->
+<div class="btn cancel" onclick="closeForm()">
         <br>
         <br>
     
@@ -55,6 +59,93 @@
 	</div>
 <!--/Video text--> 
 <!--/Home-->
+<div id="slideshow">
+    <div class="container">
+        <div class="slideContainer">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 8</div>
+                    <img class="slideshowImage" src="stylesheets/img/myface.jpg" alt="Grady">
+                        <div class="slideOverlay">
+                            My name is Grady Mellin, let me tell you a little bit about myself: 
+                        </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 8</div>
+                    <img class="slideshowImage" src="stylesheets/img/Westminster.png" alt="Westminster College" style="padding: 4vw 2vw;">
+                    <div class="slideOverlay">
+                        I graduate of Westminster College with a B.S. in Physics minoring in Applied Mathematics
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 8</div>
+                    <img class="slideshowImage" src="stylesheets/img/HTML_CSS_and_JavaScript.png" alt="HTML CSS and JavaScript">
+                    <div class="slideOverlay">
+                        I am training to be a full-stack software developer training in: HTML, CSS, JavaScript
+                    </div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 8</div>
+                    <img class="slideshowImage" src="stylesheets/img/python.png" alt="python">
+                    <div class="slideOverlay">
+                        I am well trained in Python,
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 8</div>
+                    <img class="slideshowImage" src="stylesheets/img/C_sharp.png" alt="C#">
+                    <div class="slideOverlay">
+                        C#, .NET Framework, ASP>NET, MVC,
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">6 / 8</div>
+                    <img class="slideshowImage" src="stylesheets/img/SQL.png" alt="sql"style="padding: 2vw 1vw;">
+                    <div class="slideOverlay">
+                        back end develoment, databases and SQL.
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">7 / 8</div>
+                    <img class="slideshowImage" src="stylesheets/img/Me_Belaying.jpg" alt="Grady">
+                    <div class="slideOverlay">
+                        While I am a trained software developer with a degree in physics, there is much more to me.
+                        I love adventure and in my free time am often found in the mountians, rock climbing, mountianeering and backcountry skiing.  
+                        
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">8 / 8</div>
+                    <img class="slideshowImage" src="stylesheets/img/hand_shake.jpg" alt="Contact Me">
+                    <div class="slideOverlay">
+                        If you enjoyed what you have learned and would like to get to know me better please <a href="#contact">contact me!</a> 
+                    </div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+                <br>
+                <div style="text-align:center">
+ 
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+        </div>    
+    </div>
+</div>
+
 <!--About-->
     <div class="row" id="about"> 
         <div class="column_2"> <!-- Left column -->
@@ -83,36 +174,43 @@
                 </h2>
         </div>
         <div class="column_2"> <!-- Right column -->
-            <a href="https://github.com/GradyMellin" target="_blank"><img src="stylesheets/img/Github.png" alt="GitHub"></a>
+            <a href="https://github.com/GradyMellin" id="gitPic" target="_blank"><img src="stylesheets/img/Github.png" alt="GitHub"></a>
         </div>
     </div>
 <!--/GitHub-->
+</div>
 <!--Contact-->
-    <div class="row" id="contact">
-        <div class="column_3">
-            <img src="stylesheets/img/hand_shake.jpg" alt="Contact_Image">
-        </div>
-        <div class="column_1">
-            <h1>Contact</h1>
-                <form action="" method="get">
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-						<input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-					<label>Message:</label>
-						<input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="Submit">
-                </form>
-        </div>
-    </div>
+<div id="contact">
+    <button onclick="openForm()" class="popUpButton" id="popUp"> CONTACT </button>
+    <div class="formPopup" id="myForm">
+            <form action="" method="get" class="formContainer">
+                <h1>Contact</h1>
+                <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Please enter your name" required>
+                <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Please enter your email" required>
+                <label for="phone"><b>Phone</b></label>
+			        <input type="tel" id="phone" name="phone" placeholder="Please enter your phone number">
+                <label for="message">Message:</label>
+                    <input type="text" id="message" name="message" placeholder="Please write me a message">
+
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+    </div>    
+</div>
 <!--/Contact-->
 <!--Footer-->
     <footer>
             Site Created By: Grady Mellin
-            <a href="https://www.linkedin.com/in/grady-mellin-b01059198/">Linked-In</a>
-            <a href="https://www.facebook.com/grady.mellin" target="_blank">Facebook</a>
+            <a href="https://www.linkedin.com/in/grady-mellin-b01059198/" style="margin-right: 22vw;">Linked-In</a>
+            <a href="https://www.facebook.com/grady.mellin">Facebook</a>
+            <a href="https://github.com/GradyMellin">GitHub</a>
     </footer>
 <!--/Footer-->
+
+<script src="js/portfolio_js.js"></script>
+
     </body>
 <!--/BODY-->    
 </html>
