@@ -1,0 +1,26 @@
+{% load static %}
+
+<!--Contact-->
+<div id="contact">
+    <button onclick="openForm()" class="popUpButton" id="popUp"> CONTACT </button>
+    <div class="formPopup" id="myForm">
+            <form action="{% url 'createContact' %}" method="POST" class="formContainer">
+                {% csrf_token %}
+                <h1>Contact</h1>
+                {{ form.non_field_errors }}
+                <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Please enter your name" required>
+                <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Please enter your email" required>
+                <label for="phone"><b>Phone</b></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Please enter your phone number">
+                <label for="message">Message:</label>
+                    <input type="text" id="message" name="message" placeholder="Please write me a message">
+                
+                    
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+    </div>    
+    </div>
+    <!--/Contact-->

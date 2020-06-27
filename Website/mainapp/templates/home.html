@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Grady Mellin{% endblock %}
+
+{% block content %}
+
+<!--Home-->
+<div class="btn cancel" onclick="closeForm()">
+    <br>
+    <br>
+
+<!--Video-->
+<div id="home">
+    <video autoplay muted loop id="background_video">
+        <source src="{% static 'stylesheets/img/Star-6962.mp4' %}" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<!--/Video-->
+<!-- Video text --> 
+<div class="video_text"> 
+    <h1 style="color:white;">Grady Mellin's Portfolio</h1>
+        <p  class="center"> 
+            <strong>
+                    <q>For a successful technology, 
+                    reality must take precedence over public relations,
+                    for Nature cannot be fooled.
+                    </q>	
+                    <br>-Richard P. Feynman<br>
+                    <br>
+                    My name is Grady Mellin. Welcome to my portfolio website. On it, I will tell you about my background and experience.<br>
+                    <br>Thank you for stopping by and enjoy! 
+            </strong>
+        </p> 
+</div>
+<!--/Video text--> 
+<!--/Home-->
+<div id="slideshow">
+<div class="container">
+    <div class="slideContainer">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 8</div>
+                <img class="slideshowImage" src="{% static 'stylesheets/img/myface.jpg' %}" alt="Grady">
+                    <div class="slideOverlay">
+                        My name is Grady Mellin, let me tell you a little bit about myself: 
+                    </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 8</div>
+                    <img class="slideshowImage" src="{% static 'stylesheets/img/Westminster.png' %}" alt="Westminster College" style="padding: 4vw 2vw;">
+                <div class="slideOverlay">
+                    I graduate of Westminster College with a B.S. in Physics minoring in Applied Mathematics
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 8</div>
+                <img class="slideshowImage" src="{% static 'stylesheets/img/HTML_CSS_and_JavaScript.png' %}" alt="HTML CSS and JavaScript">
+                <div class="slideOverlay">
+                    I am training to be a full-stack software developer training in: HTML, CSS, JavaScript
+                </div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 8</div>
+                <img class="slideshowImage" src="{% static 'stylesheets/img/python.png' %}" alt="python">
+                <div class="slideOverlay">
+                    I am well trained in Python,
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 8</div>
+                <img class="slideshowImage" src="{% static 'stylesheets/img/C_sharp.png' %}" alt="C#">
+                <div class="slideOverlay">
+                    C#, .NET Framework, ASP>NET, MVC,
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 8</div>
+                <img class="slideshowImage" src="{% static 'stylesheets/img/SQL.png' %}" alt="sql"style="padding: 2vw 1vw;">
+                <div class="slideOverlay">
+                    back end develoment, databases and SQL.
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 8</div>
+                <img class="slideshowImage" src="{% static 'stylesheets/img/Me_Belaying.jpg' %}" alt="Grady">
+                <div class="slideOverlay">
+                    While I am a trained software developer with a degree in physics, there is much more to me.
+                    I love adventure and in my free time am often found in the mountians, rock climbing, mountianeering and backcountry skiing.  
+                    
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 8</div>
+                <img class="slideshowImage" src="{% static 'stylesheets/img/hand_shake.jpg' %}" alt="Contact Me">
+                <div class="slideOverlay">
+                    If you enjoyed what you have learned and would like to get to know me better please <a href="#contact">contact me!</a> 
+                </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <br>
+            <div style="text-align:center">
+
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+                <span class="dot" onclick="currentSlide(6)"></span> 
+    </div>    
+</div>
+</div>
+
+<!--About-->
+<div class="row" id="about"> 
+    <div class="column_2"> <!-- Left column -->
+        <img src="{% static 'stylesheets/img/Laptop.jfif' %}" alt="Laptop">
+    </div>
+
+    <div class="column_1"> <!-- Right column -->
+        <h1>About</h1>
+        <p>I am a software developer who loves to code! As a father of none, I enjoy spending time outside and traveling. <br>
+            <br>I am a graduate of <a href="https://www.westminstercollege.edu/" target="_blank">Westminster College</a>, with a B.S. in Physics,
+            and currently training with <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s 
+            Software Developer Boot Camp, and trained and experienced in the following web and programming languages: Python, C#, HTML, CSS, JavaScript, SQL and more. <br>
+            <br>I am soon to be a qualified full-stack developer and would love to work with you on your project. <a href="#contact">Contact</a> me below!</p>
+    </div>
+</div>
+<!--/About-->
+<!-- GitHub -->
+<div class="row" id="gitHub">
+    <div class="column_1"> <!-- Left column -->
+        <h1>GitHub</h1>
+        <br>
+            <h2>
+                You can view my coding projects<br>
+                on my GitHub profile by clicking on the<br>
+                GitHub logo.
+            </h2>
+    </div>
+    <div class="column_2"> <!-- Right column -->
+        <a href="https://github.com/GradyMellin" id="gitPic" target="_blank"><img src="{% static 'stylesheets/img/Github.png' %}" alt="GitHub"></a>
+    </div>
+</div>
+<!--/GitHub-->
+</div>
+{% include "contacts.html" %}
+
+{% endblock %}
