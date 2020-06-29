@@ -1,0 +1,41 @@
+
+{% load static %}
+
+
+
+
+<!--Contact-->
+<div id="contact">
+    <button onclick="openForm()" class="popUpButton" id="popUp"> CONTACT </button>
+    <div class="formPopup" id="myForm">
+            <form action="{% url 'createContact' %}" method="POST" class="ContactForm", id="contactform">
+                {% csrf_token %}
+                <h1>Contact</h1>
+                {{ form.non_field_errors }}
+                {{form}}
+                <input type="submit" class="btn"></input>
+                <input type="button" value="Cancel" class="btn cancel" onclick="closeForm()"></input>
+            </form>
+    </div>    
+    </div>
+    <!--/Contact-->
+ <!--
+<script type="text/javascript">
+
+    $(document).on('submit','#contactform',function(e){
+            preventDefault();
+
+            $.ajax({
+                type:'POST',
+                url:"{% url 'createContact' %}",
+                data:{
+                    'form': form
+                },
+                success:function(){
+                    $("#myForm").slideUp();( "slow" );
+                }
+            })
+    });
+
+</script>
+-->
