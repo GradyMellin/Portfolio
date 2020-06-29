@@ -5,6 +5,7 @@ from django.conf.urls import include
 from . import views
 
 
+
 urlpatterns = [
     path('createContact/', views.createContact, name="createContact"),
 ]

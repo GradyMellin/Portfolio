@@ -21,3 +21,24 @@ var slideIndex = 1;
 	  slides[slideIndex-1].style.display = "block";  
 	  dots[slideIndex-1].className += " active";
 	}
+
+$(".ContactForm").on('submit', function(e){
+	e.preventDefault();
+
+	var serializedData = $(this).serialize();
+	$.ajax({
+		type:'POST',
+		url:"{% url 'createContact' %}",
+		data: serializedData,
+		csrfmiddlewaretoken: '{{ csrf_token }}',
+		dataType: 'json',
+		success:function(){
+			alert("Thank you and I look forward to connecting with you!");
+		},
+		error:function(response){
+			alert(response["responseJSON"]["error"]);
+		}
+	});
+});
+	  
+	

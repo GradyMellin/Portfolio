@@ -23,10 +23,12 @@ $(document).ready(function(){
     });
   });
 
-function openForm() {
+ function openForm() {
     $("#myForm").slideDown();( "slow" );
   }
   
   function closeForm() {
     $("#myForm").slideUp();( "slow" );
   }
+
+  
